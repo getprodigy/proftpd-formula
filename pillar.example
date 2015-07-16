@@ -23,6 +23,9 @@ proftpd:
     TimeoutNoTransfer: 1200
     TimeoutStalled: 1200
     TimeoutIdle: 1200
+    # Port Settings
+    PassivePorts: 30000 60000
+    MasqueradeAddress: 'my.public.ip'
     # Security settings
     RootLogin: '"off"'
     RequireValidShell: '"off"'
@@ -82,4 +85,3 @@ proftpd:
     ClamAV: '"on"'
     # Specify the UNIX Local Socket
     ClamLocalSocket: /var/run/clamav/clamd.sock
-

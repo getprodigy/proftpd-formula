@@ -38,6 +38,8 @@ proftpd:
             TimeoutNoTransfer: {{ salt['pillar.get']('proftpd:TimeoutNoTransfer') }}
             TimeoutStalled: {{ salt['pillar.get']('proftpd:TimeoutStalled') }}
             TimeoutIdle: {{ salt['pillar.get']('proftpd:TimeoutIdle') }}
+            PassivePorts: {{ salt['pillar.get']('proftpd:PassivePorts') }}
+            MasqueradeAddress: {{ salt['pillar.get']('proftpd:MasqueradeAddress') }}
             RootLogin: {{ salt['pillar.get']('proftpd:RootLogin') }}
             RequireValidShell: {{ salt['pillar.get']('proftpd:RequireValidShell') }}
             User: {{ salt['pillar.get']('proftpd:User') }}
@@ -49,7 +51,7 @@ proftpd:
             DirAllowOverwrite: {{ salt['pillar.get']('proftpd:DirAllowOverwrite') }}
             DirHideNoAccess: {{ salt['pillar.get']('proftpd:DirHideNoAccess') }}
             DirLimit: {{ salt['pillar.get']('proftpd:DirLimit') }}
-            PathAllowFilter: {{ salt['pillar.get']('proftpd:PathAllowFilter') }}            
+            PathAllowFilter: {{ salt['pillar.get']('proftpd:PathAllowFilter') }}
             PathDenyFilter: {{ salt['pillar.get']('proftpd:PathDenyFilter') }}
             LogFormatDefault: {{ salt['pillar.get']('proftpd:LogFormat:default') }}
             LogFormatAuth: {{ salt['pillar.get']('proftpd:LogFormat:auth') }}
